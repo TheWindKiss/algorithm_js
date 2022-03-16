@@ -10,14 +10,14 @@
  * @param {TreeNode} root
  * @return {number[][]}
  */
- var levelOrder = function(root) {
-    let ans =[];
-    if(!root){
+var levelOrder = function (root) {
+    let ans = [];
+    if (!root) {
         return ans;
     }
-    let q=[];
+    let q = [];
     q.push(root)
-     while (q.length !== 0) {
+    while (q.length !== 0) {
         const currentLevelSize = q.length;
         ans.push([]);
         for (let i = 1; i <= currentLevelSize; ++i) {

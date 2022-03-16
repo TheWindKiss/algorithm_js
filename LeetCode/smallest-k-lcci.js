@@ -4,7 +4,7 @@
  * @return {number[]}
  */
 var smallestK = function (arr, k) {
-    quickSort(arr, 0, arr.length - 1,k)
+    quickSort(arr, 0, arr.length - 1, k)
 
     return arr.slice(0, k)
 };
@@ -25,27 +25,27 @@ function quickSort(arr, p, r, k) {
     }
 }
 
-    function randomPartition(arr, p, r) {
-        const i = parseInt(Math.random(r - p + 1)) + p;
-        swap(arr, r, i);
-        return partition(arr, p, r)
-    }
+function randomPartition(arr, p, r) {
+    const i = parseInt(Math.random(r - p + 1)) + p;
+    swap(arr, r, i);
+    return partition(arr, p, r)
+}
 
-    function partition(arr, p, r) {
-        let x = arr[r];
-        let i = p - 1;
+function partition(arr, p, r) {
+    let x = arr[r];
+    let i = p - 1;
 
-        for (j = p; j < r; j++) {
-            if (arr[j] <= x) {
-                i = i + 1
-                swap(arr, i, j)
-            }
+    for (let j = p; j < r; j++) {
+        if (arr[j] <= x) {
+            i = i + 1
+            swap(arr, i, j)
         }
-        swap(arr, i + 1, r)
-        return i + 1
     }
-    function swap(arr, left, right) {
-        [arr[left], arr[right]] = [arr[right], arr[left]]
-    }
+    swap(arr, i + 1, r)
+    return i + 1
+}
+function swap(arr, left, right) {
+    [arr[left], arr[right]] = [arr[right], arr[left]]
+}
 
-    console.log(smallestK([1, 3, 5, 7, 2, 4, 6, 8], 4))
+console.log(smallestK([1, 3, 5, 7, 2, 4, 6, 8], 4))
