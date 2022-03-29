@@ -20,9 +20,10 @@ const getMaxLen = (arr, ch, k) => {
             l++;
             k++;
         }
-        //比较该次滑动窗口长度
-        maxLen = Math.max(maxLen, r - l + 1);
         r++;
+        //比较该次滑动窗口长度
+        maxLen = Math.max(maxLen, r - l);
+
     }
     return maxLen
 }
