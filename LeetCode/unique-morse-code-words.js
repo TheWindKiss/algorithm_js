@@ -39,8 +39,5 @@
         }
         ciphers.add(cipher);
     }
-    console.log(ciphers)
     return ciphers.size;
 };
-
-console.log(uniqueMorseRepresentations(["cbrl","cdfl","wvtj","wvkm","anuyt"]))
