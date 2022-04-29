@@ -15,6 +15,9 @@
  * @return {Node}
  */
 var construct = function (grid) {
+    //题目难点在于读题
+    //思路：用递归的思路，构造树，首先是最大的，然后四等分，判断四个部分的子树。
+    //如果对应部分中的值唯一则该子树为叶节点，直接返回叶节点构造即可，否则继续向下。
     return dfs(grid, 0, 0, grid.length, grid.length);
 };
 const dfs = (grid, x0, y0, x1, y1) => {
