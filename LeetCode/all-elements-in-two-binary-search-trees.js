@@ -12,7 +12,7 @@
  * @return {number[]}
  */
  var getAllElements = function(root1, root2) {
-     //中序遍历获得两个数组，在合并数组。
+     //中序遍历获得树的值放到数组中，再合并数组。
     const vals1=[],vals2=[];
     const inorder=(node,arr)=>{
         if(node){
