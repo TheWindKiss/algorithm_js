@@ -17,7 +17,6 @@ var numSubarrayProductLessThanK = function (nums, k) {
             pro /= nums[j++];
         }
         ans += i - j + 1;
-        console.log(`i:${i}----j${j}`)
     }
     return ans;
 };
